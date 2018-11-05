@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tareas</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+	<h1 class="pageTitle">Lista de Tareas</h1>
+	<form action='/' method="post">
+		<textarea name="cont-textarea" rows="8" cols="30"></textarea><br>
+		<input type="submit" value="crear tarea">
+	</form>
+	<div class="Allnotes-cont">
+
+		<% @tareas.each do |tarea| %>
+		<% if tarea['done'] %>
+		<div class="note_cont done_task" id=" <%=  tarea['id'] %> ">
+		<%else %>
+		<div class="note_cont" id=" <%=  tarea['id'] %> ">
+		<% end %>
+		
+			<div class="infoNote-cont">
+				<p class="task_title"><%= tarea["title"]  %></p>
+				<span class="date">creado: <%= tarea['created_at'][0..9] %></span>
+				
+			</div>
+			<div class="optionsNote-cont">
+				<a href="/changes/<%= tarea['id'] %>" title="Editar tarea"><i class="fas fa-edit"></i></a>
+				<a href="/delete/<%= tarea['id'] %>" title="Eliminar tarea" ><i class="fas fa-trash-alt"></i></a>
+				
+			</div>
+		</div>
+		<% end %>
+	</div>
+</body>
+</html>

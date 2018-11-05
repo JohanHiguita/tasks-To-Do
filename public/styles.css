@@ -1,0 +1,81 @@
+body {
+	width: 90%;
+	margin: auto;
+	/*border: 2px solid green;*/
+	background-color: rgb(250, 250, 244);
+}
+
+form, .pageTitle {
+	text-align: center;
+	/*border: 1px solid  blue;*/
+}
+
+.Allnotes-cont{
+	margin-top: 20px;
+	/*border: 1px solid red;*/
+}
+
+.note_cont{
+	/*border: 1px solid blue;*/
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	margin-bottom: 5px;
+	border-radius: 6px;
+}
+.infoNote-cont, .optionsNote-cont{
+	display: inline;
+	display: flex;
+
+}
+.infoNote-cont{
+	/*border: 1px solid black;*/
+	flex-direction: column;
+	/*align-items: center;*/
+	text-align: left;
+	margin-left: 15px;
+}
+
+.optionsNote-cont{
+	/*border: 1px solid black;*/
+	flex-direction: row;
+	align-items: center;
+	margin-right: 15px;
+
+
+}
+
+
+.note_cont{
+	background-color: rgb(255, 210, 210); 
+}
+
+.done_task{
+	background-color: rgb(210, 255, 210);
+}
+
+.infoNote-cont .date {
+	font-size: 0.8em;
+	font-style: italic;
+	color: #777;
+	margin-bottom: 5px;
+}
+
+
+.infoNote-cont .task_title {
+	font-size: 1.3em;
+	font-style:normal;
+	font-weight: bold;
+}
+
+.optionsNote-cont a{
+	text-decoration: none;
+	color: #444;
+	margin-left: 15px;
+}
+
+.optionsNote-cont a:hover{
+	color: black;
+	
+}
